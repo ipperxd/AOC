@@ -50,11 +50,9 @@ public class Day1
         ResultList.Sort();
         var secondList = new List<int>();
 
-        for (int i = 0; i <= 2; i++)
-        {
-            secondList.Add(ResultList.Last());
-            ResultList.Remove(ResultList.Last());
-        }
+        secondList.Add(ResultList.Last());
+        secondList.Add(ResultList.Last() - 1);
+        secondList.Add(ResultList.Last() - 2);
 
         return secondList.Sum().ToString();
 
