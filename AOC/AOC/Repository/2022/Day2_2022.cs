@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace AOC.Repository;
+namespace AOC.Repository._2022;
 
-public class Day2 : Iday
+public class Day2_2022 : Iday
 {
     string[]? data;
     public void SetData()
     {
-        data = Utility.Utility.LoadData("Day2.txt");
+        data = Utility.Utility.LoadData("2022\\Day1.txt");
     }
     public string Solution1()
     {
