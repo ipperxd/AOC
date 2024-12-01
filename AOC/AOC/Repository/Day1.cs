@@ -1,5 +1,5 @@
 ﻿namespace AOC.Repository;
-public class Day1
+public class Day1 : Iday
 {
     string[]? data;
 
