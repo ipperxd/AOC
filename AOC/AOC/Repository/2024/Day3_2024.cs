@@ -127,9 +127,10 @@ internal class Day3_2024 : Iday
                         number2.Append(d);
                     }
                 }
-
-                numberOne = int.Parse(number1.ToString());
-                numberTwo = int.Parse(number2.ToString());
+                if(!string.IsNullOrEmpty(number1.ToString()))
+                    numberOne = int.Parse(number1.ToString());
+                if (!string.IsNullOrEmpty(number2.ToString()))
+                    numberTwo = int.Parse(number2.ToString());
 
                 var added = numberOne * numberTwo;
 
