@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace AOC.Repository._2023;
+namespace AOC.Repository._2024;
 
 public class Day1_2024 : Iday
 {
@@ -25,7 +25,7 @@ public class Day1_2024 : Iday
 
         for (int i = 0; i < data.Length; i++)
         {
-            string[] splittedArray = data[i].Split(new char[] { ' ' }, 2);
+            string[] splittedArray = data[i].Split(new char[] { ' ' }, 5);
             firstList.Add(int.Parse(splittedArray[0]));
             secondList.Add(int.Parse(splittedArray[1]));
         }
