@@ -29,3 +29,4 @@ using AOC.Repository._2024;
 
 Day4_2024 day4_2024 = new Day4_2024();
 Console.WriteLine(day4_2024.Solution1());
+Console.WriteLine(day4_2024.Solution2());

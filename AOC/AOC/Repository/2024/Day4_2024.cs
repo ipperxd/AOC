@@ -136,93 +136,70 @@ public class Day4_2024 : Iday
             {
 
 
-                if (data[i][j] == 'X')
+                if (data[i][j] == 'A')
                 {
 
-                    // - j
+                    // -- = M, ++ = S & +- = M, -+ = S
+
+                    /*
+                       M S
+                        A
+                       M S
+                     */
+
                     try
                     {
-                        if (data[i][j - 1] == 'M' && data[i][j - 2] == 'A' && data[i][j - 3] == 'S')
+                        if (data[i - 1][j - 1] == 'M' && data[i + 1][j + 1] == 'S' && data[i + 1][j - 1] == 'M' && data[i - 1][j + 1] == 'S')
                         {
-                            grid[i, j] = data[i][j];
                             result++;
                         }
                     }
                     catch { }
 
-                    // + j
+                    // -- = M, ++ = S & -+ = M, +- = S
+                    /*
+                       M M
+                        A
+                       S S
+                     */
                     try
                     {
-                        if (data[i][j + 1] == 'M' && data[i][j + 2] == 'A' && data[i][j + 3] == 'S')
+                        if (data[i - 1][j - 1] == 'M' && data[i + 1][j + 1] == 'S' && data[i - 1][j + 1] == 'M' && data[i + 1][j - 1] == 'S')
                         {
-                            grid[i, j] = data[i][j];
                             result++;
                         }
                     }
                     catch { }
 
-                    // + I
+                    // +- = M, -+ = S & ++ = M, -- = S
+                    /*
+                      S S
+                       A
+                      M M
+                    */
                     try
                     {
-                        if (data[i + 1][j] == 'M' && data[i + 2][j] == 'A' && data[i + 3][j] == 'S')
+                        if (data[i + 1][j - 1] == 'M' && data[i - 1][j + 1] == 'S' && data[i + 1][j + 1] == 'M' && data[i - 1][j - 1] == 'S')
                         {
-                            grid[i, j] = data[i][j];
                             result++;
                         }
                     }
                     catch { }
 
-                    // - I
+                    // ++ = M, -+ = S & -+ = M, -- = S
+                    /*
+                      S M
+                       A
+                      S M
+                    */
                     try
                     {
-                        if (data[i - 1][j] == 'M' && data[i - 2][j] == 'A' && data[i - 3][j] == 'S')
+                        if (data[i + 1][j + 1] == 'M' && data[i - 1][j - 1] == 'S' && data[i - 1][j + 1] == 'M' && data[i + 1][j - 1] == 'S')
                         {
-                            grid[i, j] = data[i][j];
                             result++;
                         }
                     }
                     catch { }
-
-                    // ++
-                    try
-                    {
-                        if (data[i + 1][j + 1] == 'M' && data[i + 2][j + 2] == 'A' && data[i + 3][j + 3] == 'S')
-                        {
-                            grid[i, j] = data[i][j];
-                            result++;
-                        }
-                    }
-                    catch { }
-                    // --
-                    try
-                    {
-                        if (data[i - 1][j - 1] == 'M' && data[i - 2][j - 2] == 'A' && data[i - 3][j - 3] == 'S')
-                        {
-                            grid[i, j] = data[i][j];
-                            result++;
-                        }
-                    }
-                    catch { }
-
-                    //+-
-                    try
-                    {
-                        if (data[i + 1][j - 1] == 'M' && data[i + 2][j - 2] == 'A' && data[i + 3][j - 3] == 'S')
-                            result++;
-                    }
-                    catch { }
-
-                    //-+
-                    try
-                    {
-                        if (data[i - 1][j + 1] == 'M' && data[i - 2][j + 2] == 'A' && data[i - 3][j + 3] == 'S')
-                        {
-                            grid[i, j] = data[i][j];
-                            result++;
-                        }
-                    }
-                    catch { }
-
 
                 }
             }
