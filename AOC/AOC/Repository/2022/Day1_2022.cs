@@ -1,11 +1,11 @@
-﻿namespace AOC.Repository;
-public class Day1
+﻿namespace AOC.Repository._2022;
+public class Day1_2022 : Iday
 {
     string[]? data;
 
     public void SetData()
     {
-        data = Utility.Utility.LoadData("Day1.txt");
+        data = Utility.Utility.LoadData("2022\\Day1.txt");
     }
 
     public string Solution1()
