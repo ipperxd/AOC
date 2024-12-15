@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Repository\2023\" />
+    <Folder Include="Repository\2019\" />
+    <Folder Include="Repository\2018\" />
+    <Folder Include="Repository\2017\" />
+    <Folder Include="Repository\2016\" />
+    <Folder Include="Repository\2021\" />
+  </ItemGroup>
+
 </Project>
