@@ -1,8 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information0
 
+using AOC.Repository._2015;
 using AOC.Repository._2022;
 using AOC.Repository._2024;
 
+// 2015
+Day1_2015 day1_2015 = new Day1_2015();
+//Console.WriteLine(day1_2015.Solution1());
+Console.WriteLine(day1_2015.Solution2());
 
 // 2022
 // DAY 1
@@ -31,5 +36,6 @@ using AOC.Repository._2024;
 //Console.WriteLine(day4_2024.Solution1());
 //Console.WriteLine(day4_2024.Solution2());
 
-Day5_2024 day5_2024 = new Day5_2024();
-Console.WriteLine(day5_2024.Solution1());
+
+//Day5_2024 day5_2024 = new Day5_2024();
+//Console.WriteLine(day5_2024.Solution1());
