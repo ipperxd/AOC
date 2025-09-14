@@ -1,27 +1,32 @@
 ﻿
+using AOC.Interface;
+
 namespace AOC_2024;
-public class Day1Solution
+public class Day1Solution : IDaySolution
 {
-    string[] lines = AOC.SharedUtilities.LoadData("2024Day1.txt");
     int result;
 
 
     List<int> LeftList = new List<int>();
     List<int> RighttList = new List<int>();
 
-    public void Start()
+    public void Start(string[] data)
     {
+        LeftList.Clear();
+        RighttList.Clear();
         result = 0;
-        foreach (var line in lines)
+        foreach (var line in data)
         {
-            LeftList.Add(int.Parse(line.Substring(0, 5).Trim()));
-            RighttList.Add(int.Parse(line.Substring(6).Trim()));
+            var x = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+            LeftList.Add(int.Parse(x[0]));
+            RighttList.Add(int.Parse(x[1]));
         }
     }
 
-    public int SolutionPart1()
+    public int SolutionPart1(string[] data)
     {
-        Start();
+        Start(data);
 
         LeftList.Sort();
         RighttList.Sort();
@@ -36,30 +41,25 @@ public class Day1Solution
         return result;
     }
 
-    public int SolutionPart2()
+    public int SolutionPart2(string[] data)
     {
-        Dictionary<int, int> leftRightPairs = new Dictionary<int, int>();
-        
-        Start();
+        Start(data);
 
-        for (int i = 0; i < RighttList.Count; i++)
+        for (int i = 0; i < LeftList.Count; i++)
         {
-            if (LeftList.Contains(RighttList[i]))
+            int addingUp = 0;
+
+            for (int j = 0; j < RighttList.Count; j++)
             {
-                if (!leftRightPairs.ContainsKey(RighttList[i]))
+                if (RighttList[i] == LeftList[j])
                 {
-                    leftRightPairs[RighttList[i]] = 1;
-                }
-                else
-                {
-                    leftRightPairs[RighttList[i]]++;
+                    addingUp++;
                 }
             }
+
+            result += addingUp * RighttList[i]; 
         }
-        foreach (var pair in leftRightPairs)
-        {
-            result += pair.Key * pair.Value;
-        }
+        
 
         return result;
     }

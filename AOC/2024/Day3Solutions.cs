@@ -1,11 +1,12 @@
-﻿using System;
+﻿using AOC.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AOC_2024;
-public class Day3Solutions
+public class Day3Solutions: IDaySolution
 {
     int result = 0;
     public int SolutionPart1(string[] data)

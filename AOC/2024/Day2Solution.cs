@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AOC.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AOC_2024;
-public class Day2Solution
+public class Day2Solution : IDaySolution
 {
-  //   string[] lines = AOC.SharedUtilities.LoadData("2024Day2.txt");
 
     int result = 0;
 
