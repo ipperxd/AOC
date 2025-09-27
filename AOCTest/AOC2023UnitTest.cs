@@ -35,18 +35,20 @@ public class AOC2023UnitTest
         var result = 0;
         var TestData = new string[]
         {
-            "1abc2",
-            "pqr3stu8vwx",
-            "a1b2c3d4e5f",
-            "treb7uchet"
+            "two1nine",
+            "eightwothree",
+            "abcone2threexyz",
+            "xtwone3four",
+            "4nineeightseven2",
+            "zoneight234",
+            "7pqrstsixteen"
         };
-        AOC_2023.Day1Solution day1Solution1 = new AOC_2023.Day1Solution();
 
         // Act
         AOC_2023.Day1Solution day1Solution = new AOC_2023.Day1Solution();
         result = day1Solution.SolutionPart2(TestData);
 
         // Assert
-        Assert.Equal(-1, result);
+        Assert.Equal(281, result);
     }
 }
