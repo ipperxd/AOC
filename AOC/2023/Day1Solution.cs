@@ -34,33 +34,35 @@ public class Day1Solution : AOC.Interface.IDaySolution
     {
         int result = 0;
 
-        List<string> words = new List<string> { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+        List<string> words = new List<string> 
+        { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+           "1","2","3","4","5","6","7","8","9"
+        };
+
+
+        string s = "";
 
         for (int i = 0; i < data.Length; i++)
         {
-            string s = "";
-            List<int> nums = new List<int>();
+         List<int> nums = new List<int>();
             for (int j = 0; j < data[i].Length; j++)
             {
-
-                var c = data[i][j];
-                var check = s;
-
-                if (char.IsDigit(data[i][j]))
+                s += data[i][j];
+                foreach (var w in words)
                 {
-                   
-                    nums.Add(int.Parse(data[i][j].ToString()));
-                }
-                else
-                {
-                    s += data[i][j];
-                    if (s)
+                    if (s.Contains(w))
                     {
-                        nums.Add(ToNumber(s));
+                        nums.Add(ToNumber(w)); 54649
                         s = "";
+
+                        if(!char.IsDigit(data[i][j]))
+                        {
+                            s += data[i][j];
+                        }
                     }
                 }
             }
+
 
             var x = nums.First().ToString() + nums.Last().ToString();
             result += int.Parse(x);
@@ -75,14 +77,23 @@ public class Day1Solution : AOC.Interface.IDaySolution
     public static int ToNumber(string s) => s switch
     {
         "one" => 1,
+        "1" => 1,
         "two" => 2,
+        "2" => 2,
         "three" => 3,
+        "3" => 3,
         "four" => 4,
+        "4" => 4,
         "five" => 5,
+        "5" => 5,
         "six" => 6,
+        "6" => 6,
         "seven" => 7,
+        "7" => 7,
         "eight" => 8,
+        "8" => 8,
         "nine" => 9
+        ,"9" => 9
     };
 
 }

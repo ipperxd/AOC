@@ -14,5 +14,10 @@ namespace AOC_2023
         {
             return day1Solution.SolutionPart1(data);
         }
+
+        public int Day1Part2(string[] data)
+        {
+            return day1Solution.SolutionPart2(data);
+        }
     }
 }
