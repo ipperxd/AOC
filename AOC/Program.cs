@@ -1,12 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AOC;
+using AOC_2023;
 using AOC_2024;
 using System.IO;
 
-Day1Solution day = new Day1Solution();
-Day2Solution day2 = new Day2Solution();
+FacadeYear2023 facadeYear2023 = new FacadeYear2023();
 
-//Console.WriteLine("2024 Day 1 - part 1 Reuslt: " + day.SolutionPart1().ToString()); // Result = 2580760
-//Console.WriteLine("2024 Day 1 - part 2 Reuslt: " + day.SolutionPart2().ToString()); // Result = 25358365
-Console.WriteLine("2024 Day 1 - part 1 Reuslt: " + day2.SolutionPart1(SharedUtilities.LoadData("2024Day2.txt")).ToString()); // Result = 411
-Console.WriteLine("2024 Day 1 - part 2 Reuslt: " + day2.SolutionPart2(SharedUtilities.LoadData("2024Day2.txt")).ToString()); // Result = 465
+Console.WriteLine( facadeYear2023.Day1Part1(SharedUtilities.LoadData("2023/2023Day1.txt"))); // Result = 54081
+Console.WriteLine(facadeYear2023.Day1Part2(SharedUtilities.LoadData("2023/2023Day1.txt"))); // Result = 54649
+
+FacadeYear2024 facadeYear2024 = new FacadeYear2024();
+
+
+//Console.WriteLine(facadeYear2024.Day1Part1(SharedUtilities.LoadData("2024/2024Day1.txt"))); // Result = 2580760
+//Console.WriteLine(facadeYear2024.Day1Part2(SharedUtilities.LoadData("2024/2024Day1.txt"))); // Result = 25358365
+//Console.WriteLine(facadeYear2024.Day2Part1(SharedUtilities.LoadData("2024/2024Day2.txt"))); // Result = 411
+//Console.WriteLine(facadeYear2024.Day2Part2(SharedUtilities.LoadData("2024/2024Day2.txt"))); // Result = 465
