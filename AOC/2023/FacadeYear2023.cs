@@ -9,6 +9,7 @@ namespace AOC_2023
     public class FacadeYear2023
     {
         Day1Solution day1Solution = new Day1Solution();
+        Day2Solution day2Solution = new Day2Solution();
 
         public int Day1Part1(string[] data)
         {
@@ -19,5 +20,16 @@ namespace AOC_2023
         {
             return day1Solution.SolutionPart2(data);
         }
+
+        public int Day2Part1(string[] data)
+        {
+            return day2Solution.SolutionPart1(data);
+        }
+
+        public int Day2Part2(string[] data)
+        {
+            return day2Solution.SolutionPart2(data);
+        }
+
     }
 }
