@@ -52,7 +52,7 @@ public class Day1Solution : AOC.Interface.IDaySolution
                 {
                     if (s.Contains(w))
                     {
-                        nums.Add(ToNumber(w)); 54649
+                        nums.Add(ToNumber(w)); 
                         s = "";
 
                         if(!char.IsDigit(data[i][j]))
