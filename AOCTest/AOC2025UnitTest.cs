@@ -90,4 +90,67 @@ public class AOC2025UnitTest
         // Assert
         Assert.Equal(4174379265, result);
     }
+
+
+    [Fact]
+    public void Day3Part1()
+    {
+        // Arrange
+        var result = 0;
+        var TestData = new string[]
+       {
+         "987654321111111",
+         "811111111111119",
+         "234234234234278",
+         "818181911112111"
+       };
+        AOC_2025.Day3Solution day3Solution = new AOC_2025.Day3Solution();
+        // Act
+        result = day3Solution.SolutionPart1(TestData);
+        // Assert
+        Assert.Equal(357, result);
+    }
+
+
+    [Fact]
+    public void Day3Part2()
+    {
+        // Arrange
+        long result = 0;
+        var TestData = new string[]
+       {
+         "987654321111111",
+         "811111111111119",
+         "234234234234278",
+         "818181911112111"
+       };
+        AOC_2025.Day3Solution day3Solution = new AOC_2025.Day3Solution();
+        // Act
+        result = day3Solution.SolutionPart2(TestData);
+        // Assert
+        Assert.Equal(3121910778619, result);
+    }
+
+    [Fact]
+    public void Day3Part2Version2()
+    {
+        // Arrange
+        long result = 0;
+        var TestData = new string[]
+       {
+         "7657222591427217122445272425253565561122226426262235211484443362522725526264152632322121122211226432",
+         "3373333633442752337522633445663374225443334322548433257443232874664837733346552233522456333621353345",
+         "1332222423213233321341322323233232323313322333313132332432322231343233323222222322322223132223242221",
+         "2542511113222221222322623512315322253412425222332222424222523225123222231222224522222222222123312322"
+       };
+
+        AOC_2025.Day3Solution day3Solution = new AOC_2025.Day3Solution();
+
+        // Ac
+
+        result = day3Solution.ChattyAnswer(TestData);
+        // Assert
+        Assert.Equal(2976431897330, result);
+    }
+
 }

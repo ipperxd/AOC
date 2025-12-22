@@ -23,3 +23,9 @@ Console.WriteLine(facadeYear2025.Day1Part2(SharedUtilities.LoadData("2025/2025Da
 
 Console.WriteLine(facadeYear2025.Day2Part1(SharedUtilities.LoadData("2025/2025Day2.txt"))); // Result = 17077011375
 Console.WriteLine(facadeYear2025.Day2Part2(SharedUtilities.LoadData("2025/2025Day2.txt"))); // Result = 36037497037
+
+Console.WriteLine(facadeYear2025.Day3Part1(SharedUtilities.LoadData("2025/2025Day3.txt"))); // Result = 17179
+
+// I had a long talk with ChatGPT to get this working and i finally understood what was wrong with my initial approach.
+// I know it is cheating, but better to try, fail and learn than to stay stuck forever...
+Console.WriteLine(facadeYear2025.Day3Part2(SharedUtilities.LoadData("2025/2025Day3.txt"))); // Result = My - 169959329789057 (To low...) - Real and chat - 170025781683941  Difference : 66.451.894.884

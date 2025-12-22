@@ -28,4 +28,15 @@ public class FacadeYear2025
     {
         return Day2Solution.SolutionPart2(data);
     }
+
+    public Day3Solution Day3Solution = new Day3Solution();
+    public int Day3Part1(string[] data)
+    {
+        return Day3Solution.SolutionPart1(data);
+    }
+
+    public long Day3Part2(string[] data)
+    {
+        return Day3Solution.ChattyAnswer(data);
+    }
 }
