@@ -153,4 +153,84 @@ public class AOC2025UnitTest
         Assert.Equal(2976431897330, result);
     }
 
+    [Fact]
+    public void Day4Part1()
+    {
+        // Arrange
+        var result = 0;
+        var TestData = new string[]
+           {
+            "..@@.@@@@.",
+            "@@@.@.@.@@",
+            "@@@@@.@.@@",
+            "@.@@@@..@.",
+            "@@.@@@@.@@",
+            ".@@@@@@@.@",
+            ".@.@.@.@@@",
+            "@.@@@.@@@@",
+            ".@@@@@@@@.",
+            "@.@.@@@.@."
+           };
+
+        AOC_2025.Day4Solution day4Solution = new AOC_2025.Day4Solution();
+        // Act
+        result = day4Solution.SolutionPart1(TestData);
+        // Assert
+        Assert.Equal(13, result);
+    }
+
+    [Fact]
+    public void Day4Part2()
+    {
+        // Arrange
+        var result = 0;
+        var TestData = new string[]
+           {
+            "..@@.@@@@.",
+            "@@@.@.@.@@",
+            "@@@@@.@.@@",
+            "@.@@@@..@.",
+            "@@.@@@@.@@",
+            ".@@@@@@@.@",
+            ".@.@.@.@@@",
+            "@.@@@.@@@@",
+            ".@@@@@@@@.",
+            "@.@.@@@.@."
+           };
+
+        AOC_2025.Day4Solution day4Solution = new AOC_2025.Day4Solution();
+        // Act
+        result = day4Solution.SolutionPart2(TestData);
+        // Assert
+        Assert.Equal(43, result);
+    }
+
+    [Fact]
+    public void Day5Part1()
+    {
+        // Arrange
+        long result = 0;
+        var TestData = new string[]
+           {
+            "3-5",
+            "10-14",
+            "16-20",
+            "12-18",
+            "",
+            "1",
+            "5",
+            "8",
+            "11",
+            "17",
+            "32"
+           };
+
+        AOC_2025.Day5Solution day5Solution = new AOC_2025.Day5Solution();
+        // Act
+        result = day5Solution.SolutionPart1(TestData);
+        // Assert
+        Assert.Equal(3, result);
+    }
+
+
 }
