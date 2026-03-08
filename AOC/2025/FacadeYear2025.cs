@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,9 +35,30 @@ public class FacadeYear2025
     {
         return Day3Solution.SolutionPart1(data);
     }
-
     public long Day3Part2(string[] data)
     {
         return Day3Solution.ChattyAnswer(data);
+    }
+
+    public Day4Solution Day4Solution = new Day4Solution();
+    public int Day4Part1(string[] data)
+    {
+        return Day4Solution.SolutionPart1(data);
+    }
+    public int Day4Part2(string[] data)
+    {
+        return Day4Solution.SolutionPart2(data);
+    }
+
+    public Day5Solution Day5Solution = new Day5Solution();
+
+    public long Day5Part1(string[] data)
+    {
+        return Day5Solution.SolutionPart1(data);
+    }
+
+    public int Day5Part2(string[] data)
+    {
+        return Day5Solution.SolutionPart2(data);
     }
 }
